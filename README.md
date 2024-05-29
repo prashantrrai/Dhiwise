@@ -34,12 +34,12 @@ Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 
-**Login Credentials:**
+4. **Login Credentials:**
    ```sh
    Username : prashantrrai 
    Password : Admin@123
 
-**Payment Details of Card:**
+5. **Payment Details of Card:**
    ```sh
    Card Number : 5555555555554444 
    Exp. Date   : Any Choice
