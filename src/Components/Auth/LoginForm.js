@@ -34,7 +34,7 @@ const LoginForm = () => {
                 password: ''
             });
             // alert('User logged in successfully');
-            toast.success('Login successful!');
+            toast.success('Login successfull!');
             dispatch(login(token));
             navigate('/');
         } catch (error) {

@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import './userform.css';
+import './SignUp.css';
 import { Link } from 'react-router-dom';
-import { SignUp } from '../../Services/Auth/Signup';
+import { SignUpService } from '../../Services/Auth/Signup';
+import { toast } from 'react-toastify';
 
-const UserForm = () => {
+const SignUp = () => {
     const [formData, setFormData] = useState({
         username: '',
         profile: {
@@ -60,7 +61,7 @@ const UserForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await SignUp(formData);
+            await SignUpService(formData);
             setFormData({
                 username: '',
                 profile: {
@@ -80,15 +81,16 @@ const UserForm = () => {
                     isActive: ''
                 },
             });
-            alert('User registered successfully');
+            toast.success('Registration successfull');
 
         } catch (error) {
             console.error('There was an error registering the user!', error);
+            toast.error('Failed to Register. Please check all the fields.');
         }
     };
 
     return (
-        <>
+        <div className='wrap'>
             <h1 className='heading'>Register User</h1>
 
             <form className="user-form" onSubmit={handleSubmit}>
@@ -225,10 +227,10 @@ const UserForm = () => {
             <p className="login-link">
                 Already Registered? <Link to="/login">Login</Link>
             </p>
-        </>
+        </div>
 
 
     );
 };
 
-export default UserForm;
+export default SignUp;

@@ -1,10 +1,10 @@
 import React from 'react';
-import UserForm from '../../Components/UserForm/UserForm';
+import SignUp from '../../Components/Auth/SignUp'
 
 const SignUpPage = () => {
     return (
-        <div>
-            <UserForm />
+        <div style={{ backgroundColor: '#f0f2f5' }}>
+            <SignUp />
         </div>
     );
 };
