@@ -21,12 +21,12 @@ const NavBar = () => {
 
     return (
         <header className="header">
-            <img src="dhiwise logo.jpeg" alt="DhiWise Logo" className="logo" />
+            <img src="https://imgs.search.brave.com/9y78KXWHifmAcxx0ERQdxqr8PyHYvFFHukHUhV65RDA/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9taXJv/Lm1lZGl1bS5jb20v/djIvMSpBY2x6Tk9p/bHFyckw5VmdvQTkx/SGh3LnBuZw" alt="DhiWise Logo" className="logo" />
             <nav className="nav">
+                <Link to="/dashboard" className="nav-item">Dashboard</Link>
                 <Link to="/product" className="nav-item">Products</Link>
-                <Link to="/pricing" className="nav-item">Pricing</Link>
                 <Link to="/resources-support" className="nav-item">Resources & Support</Link>
-                <Link to="/wisegpt" className="nav-item">WiseGPT</Link>
+                <Link to="/orders" className="nav-item">Orders</Link>
             </nav>
 
             <div className="cart">

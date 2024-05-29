@@ -11,15 +11,17 @@ const PaymentFailure = () => {
 
     const closeModal = () => {
         setModalIsOpen(false);
-        navigate('/'); // Redirect to home or any other page
+        navigate('/');
     };
 
     useEffect(() => {
         const timer = setTimeout(() => {
             closeModal();
-        }, 3000); // Auto-close modal after 3 seconds
+        }, 3000);
         return () => clearTimeout(timer);
     }, []);
+
+
 
     return (
         <div className="payment-failure-page">

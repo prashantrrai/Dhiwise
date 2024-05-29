@@ -15,6 +15,8 @@ import PaymentSuccess from './Components/Payment Checkout/PaymentSuccess';
 import PaymentFailure from './Components/Payment Checkout/PaymentFailure';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import OrdersPage from './Pages/OrdersPage/OrdersPage';
+import Dashboard from './Pages/Dashboard/Dashboard';
 
 const App = () => {
   return (
@@ -31,6 +33,8 @@ const App = () => {
           <Route path="/payment/checkout" element={<Checkout />} />
           <Route path="/payment/success" element={<PaymentSuccess />} />
           <Route path="/payment/failure" element={<PaymentFailure />} />
+          <Route path="/orders" element={<OrdersPage />} />
+          <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
       </div>
       <ToastContainer />

@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { PaymentCheckout } from '../../Services/Payment/checkout';
-import { useDispatch } from 'react-redux';
-import { clearCart } from '../../Slice/cartSlice';
+// import { useDispatch } from 'react-redux';
+// import { clearCart } from '../../Slice/cartSlice';
 
 const Checkout = () => {
     const [checkoutItems, setCheckoutItems] = useState([]);
-    const dispatch = useDispatch();
+    // const dispatch = useDispatch();
 
     useEffect(() => {
         const items = JSON.parse(localStorage.getItem('cartItems'));
@@ -14,16 +14,15 @@ const Checkout = () => {
         }
     }, []);
 
-    const handleClearCart = () => {
-        dispatch(clearCart());
-        localStorage.removeItem('cartItems')
-    };
+    // const handleClearCart = () => {
+    //     dispatch(clearCart());
+    //     localStorage.removeItem('cartItems')
+    // };
 
     useEffect(() => {
         const handlePayment = async () => {
             try {
                 if (checkoutItems.length > 0) {
-                    console.log(checkoutItems)
                     const res = await PaymentCheckout(checkoutItems);
                     if (res) {
                         window.location.href = res.response.url;
@@ -31,7 +30,7 @@ const Checkout = () => {
                         console.error('Payment URL not found in response');
                     }
                 }
-                handleClearCart();
+                // handleClearCart();
             } catch (error) {
                 console.error('There was an error fetching the products!', error);
             }

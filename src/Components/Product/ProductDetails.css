@@ -53,6 +53,7 @@
 .product-price {
     font-size: 1.2em;
     color: #007bff;
+    font-weight: bold;
 }
 
 .add-to-cart-button {
