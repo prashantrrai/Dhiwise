@@ -18,6 +18,7 @@ const PaymentSuccess = () => {
     const [totalAmount, setTotalAmount] = useState(0);
     const orderGeneratedRef = useRef(false);
 
+    console.log('cartItem', cartItems);
     const closeModal = () => {
         setModalIsOpen(false);
         navigate('/');
@@ -42,8 +43,6 @@ const PaymentSuccess = () => {
                 const productDataPromises = productIds.map((productId) => GetProductsById(productId));
                 const responses = await Promise.all(productDataPromises);
                 const productData = responses.map(response => response.response);
-
-                console.log('Fetched product details:', productData); // Debug statement
                 setProductDetails(productData);
             } catch (error) {
                 console.error('Error fetching product details:', error);
@@ -55,18 +54,13 @@ const PaymentSuccess = () => {
         }
     }, [cartItems]);
 
+    console.log('productDetails', productDetails);
     useEffect(() => {
         const calculateTotalAmount = () => {
             const total = productDetails.reduce((acc, curr) => {
                 const cartItem = cartItems.find(ci => ci.id === curr?._id);
-
-                console.log('Current product detail:', curr); // Debug statement
-                console.log('Associated cart item:', cartItem); // Debug statement
-
                 return acc + (curr?.price * (cartItem?.quantity ?? 0));
             }, 0);
-
-            console.log('Calculated total amount:', total); // Debug statement
             setTotalAmount(total);
         };
 
@@ -78,19 +72,18 @@ const PaymentSuccess = () => {
         quantity: item.quantity
     })), [cartItems]);
 
+    console.log('totalAmount', totalAmount)
     const orderData = useMemo(() => ({
         products: productsData,
         totalAmount: totalAmount,
         status: "confirmed",
     }), [productsData, totalAmount]);
 
-    console.log('productDetails', productDetails);
-    console.log('orderData', orderData);
-
     useEffect(() => {
         if (totalAmount > 0) {
             const generateOrders = async () => {
                 try {
+                    console.log('called')
                     await GenerateOrder(orderData);
                     handleClearCart();
                     orderGeneratedRef.current = true;
@@ -103,7 +96,7 @@ const PaymentSuccess = () => {
                 generateOrders();
             }
         }
-    }, [productDetails, totalAmount]);
+    }, [totalAmount]);
 
     return (
         <div className="payment-success-page">
