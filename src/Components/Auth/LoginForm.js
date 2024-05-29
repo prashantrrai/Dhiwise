@@ -33,7 +33,6 @@ const LoginForm = () => {
                 username: '',
                 password: ''
             });
-            // alert('User logged in successfully');
             toast.success('Login successfull!');
             dispatch(login(token));
             navigate('/');

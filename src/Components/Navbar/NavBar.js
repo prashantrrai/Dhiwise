@@ -28,17 +28,18 @@ const NavBar = () => {
                 <Link to="/resources-support" className="nav-item">Resources & Support</Link>
                 <Link to="/wisegpt" className="nav-item">WiseGPT</Link>
             </nav>
-            {isLoggedIn && token ? (
-                <div className="auth-buttons">
-                    <button onClick={handleLogout}>Logout</button>
-                </div>
-            ) : (
-                <div className="auth-buttons">
-                    <Link to="/login" className="sign-in">Sign in</Link>
-                    <Link to="/signup" className="sign-up">Sign up for free</Link>
-                </div>
-            )}
+
             <div className="cart">
+                {isLoggedIn && token ? (
+                    <div className="auth-buttons">
+                        <button onClick={handleLogout}>Logout</button>
+                    </div>
+                ) : (
+                    <div className="auth-buttons">
+                        <Link to="/login" className="sign-in">Sign in</Link>
+                        <Link to="/signup" className="sign-up">Sign up for free</Link>
+                    </div>
+                )}
                 <Link to={isLoggedIn && token ? '/cart' : '/login'} className="cart-icon">
                     <i className="fas fa-shopping-cart cart-icon"></i>
                     {cartItemCount > 0 && <span className="cart-count">{cartItemCount}</span>}
