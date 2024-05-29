@@ -39,7 +39,7 @@ const NavBar = () => {
                 </div>
             )}
             <div className="cart">
-                <Link to="/cart" className="cart-icon">
+                <Link to={isLoggedIn && token ? '/cart' : '/login'} className="cart-icon">
                     <i className="fas fa-shopping-cart cart-icon"></i>
                     {cartItemCount > 0 && <span className="cart-count">{cartItemCount}</span>}
                 </Link>
