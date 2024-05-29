@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { Login } from '../../Services/Auth/Login';
 import { useDispatch } from 'react-redux';
 import { login } from '../../Slice/authSlice';
+import { toast } from 'react-toastify';
 
 const LoginForm = () => {
     const [formData, setFormData] = useState({
@@ -32,12 +33,13 @@ const LoginForm = () => {
                 username: '',
                 password: ''
             });
-            alert('User logged in successfully');
+            // alert('User logged in successfully');
+            toast.success('Login successful!');
             dispatch(login(token));
             navigate('/');
         } catch (error) {
             console.error('ERROR IN LoginForm', error);
-            alert('Failed to login');
+            toast.error('Failed to login. Please check your credentials.');
         }
     };
 

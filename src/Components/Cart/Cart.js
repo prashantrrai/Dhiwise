@@ -5,6 +5,7 @@ import './Cart.css';
 import { useNavigate } from 'react-router-dom';
 import { GetProductsById } from '../../Services/Product/Product';
 import { loadCartItems } from '../../Utils/cartutils';
+import { toast } from 'react-toastify';
 
 const Cart = () => {
     const cartItems = useSelector((state) => state.cart.items);
@@ -61,10 +62,16 @@ const Cart = () => {
 
     const handleRemove = (id) => {
         dispatch(removeFromCart(id));
+        toast.success('Item Removed from Cart', {
+            position: 'top-center'
+        });
     };
 
     const handleClearCart = () => {
         dispatch(clearCart());
+        toast.error('All Items Removed', {
+            position: 'top-center'
+        });
     };
 
     const handleCheckout = () => {

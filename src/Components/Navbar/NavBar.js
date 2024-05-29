@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import './NavBar.css';
 import { logout } from '../../Slice/authSlice';
+import { toast } from 'react-toastify';
 
 const NavBar = () => {
     const { isLoggedIn, token } = useSelector((state) => state.auth);
@@ -14,6 +15,7 @@ const NavBar = () => {
     const handleLogout = () => {
         dispatch(logout());
         localStorage.removeItem('token');
+        toast.error('Logout successful!');
         navigate('/login');
     };
 

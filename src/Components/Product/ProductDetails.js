@@ -4,6 +4,7 @@ import { GetProducts } from '../../Services/Product/Product';
 import { useDispatch } from 'react-redux';
 import { addToCart, setCartItemsFromLocalStorage } from '../../Slice/cartSlice';
 import { loadCartItems } from '../../Utils/cartutils';
+import { toast } from 'react-toastify';
 
 const ProductDetails = () => {
     const [product, setProduct] = useState([]);
@@ -11,6 +12,9 @@ const ProductDetails = () => {
 
     const handleAddToCart = (productId) => {
         dispatch(addToCart(productId));
+        toast.success('Added to Cart', {
+            position: 'top-center'
+        });
     };
 
     useEffect(() => {

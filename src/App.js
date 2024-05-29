@@ -13,6 +13,8 @@ import CartPage from './Pages/CartPage/CartPage';
 import Checkout from './Components/Payment Checkout/Checkout';
 import PaymentSuccess from './Components/Payment Checkout/PaymentSuccess';
 import PaymentFailure from './Components/Payment Checkout/PaymentFailure';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
   return (
@@ -31,6 +33,7 @@ const App = () => {
           <Route path="/payment/failure" element={<PaymentFailure />} />
         </Routes>
       </div>
+      <ToastContainer />
     </Router>
   );
 };
