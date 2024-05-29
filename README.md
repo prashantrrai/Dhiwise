@@ -1,12 +1,34 @@
-# Getting Started with Create React App
+# Advanced Analytics Dashboard for E-commerce Transactions
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Prerequisites
 
-In the project directory, you can run:
+Before you begin, ensure you have the following installed on your local machine:
 
-### `npm start`
+- Node.js (version 14.x or higher recommended)
+- npm (version 6.x or higher recommended) or yarn (optional)
+
+## Installation and Setup
+
+Follow these steps to get your project up and running:
+
+1. **Clone the repository:**
+
+   ```sh
+   git clone https://github.com/prashantrrai/Dhiwise.git
+
+   cd Dhiwise
+
+2. **Install dependencies:**
+
+   ```sh
+   npm install
+
+3. **Run the Project:**
+
+   ```sh
+   npm start
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
@@ -68,3 +90,27 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Project UI
+![alt text](image.png)
+
+![alt text](image-1.png)
+
+![alt text](image-2.png)
+
+![alt text](image-3.png)
+
+![alt text](image-4.png)
+
+![alt text](image-5.png)
+
+![alt text](image-7.png)
+
+![alt text](image-6.png)
+
+![alt text](image-8.png)
+
+## Authors
+
+- [@prashantrrai](https://github.com/prashantrrai)
+

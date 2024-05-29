@@ -42,7 +42,7 @@ const Orders = () => {
                                             <div className="product-info">
                                                 <h3>{item?.productDetails.name}</h3>
                                                 <p>Quantity: {item?.quantity}</p>
-                                                <p style={{ fontWeight: 'bold' }}>Price: ₹ {order?.totalAmount}</p>
+                                                <p style={{ fontWeight: 'bold' }}>Price: ₹ {item?.productDetails.price}</p>
                                             </div>
                                         </div>
                                     ))}
