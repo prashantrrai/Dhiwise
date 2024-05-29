@@ -22,7 +22,7 @@ const Orders = () => {
         <div className="orders-container">
             <h1>Your Orders</h1>
             {orders.length === 0 ? (
-                <p>Your cart is empty</p>
+                <p>No Order Found</p>
             ) :
                 (
                     <div className="orders-list">
