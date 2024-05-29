@@ -1,7 +1,7 @@
 // src/Pages/UsersPage/userspage.js
 
 import React from 'react';
-import UserDetails from '../../Components/UserDetails/userdetails';
+import UserDetails from '../../Components/UserDetails/UserDetails';
 import './userpage.css';
 
 const UsersPage = () => {

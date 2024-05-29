@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { getUsers } from '../../Services/User/user';
+import { getUsers } from '../../Services/User/User';
 import './userdetails.css';
 
 const UserDetails = () => {
@@ -47,7 +47,7 @@ const UserDetails = () => {
                         <tbody>
                             {users.map((user, index) => (
                                 <tr key={user.id} className={index % 2 === 0 ? 'striped' : ''}>
-                                    <td><img src={user.profile.avatarURL} alt="profile" /></td>
+                                    <td><img src={user.profile.avatarURL} alt="profile" className='profile' /></td>
                                     <td>{user._id}</td>
                                     <td>{user.username}</td>
                                     <td>{user.profile.firstName}</td>

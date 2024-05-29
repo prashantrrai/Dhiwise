@@ -66,6 +66,10 @@
     object-fit: cover;
 }
 
+.profile {
+    border-radius: 50%;
+}
+
 @media (max-width: 1200px) {
 
     .user-table th,

@@ -1,0 +1,49 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    align-items: center;
+    background-color: #111;
+    /* Slightly lighter than the main background */
+}
+
+.logo {
+    width: 50px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-item {
+    color: #fff;
+    text-decoration: none;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.auth-buttons a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.sign-in {
+    background-color: #333;
+}
+
+.sign-up {
+    background-color: #007bff;
+    /* Blue color for sign-up button */
+}
+
+.cart-icon {
+    color: white;
+}

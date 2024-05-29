@@ -1,40 +1,35 @@
 // src/App.js
 
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import RegisterPage from './Pages/RegisterPage/registerpage';
-import UsersPage from './Pages/UsersPage/userpage';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import SignUpPage from './Pages/SignUpPage/SignUpPage';
+import UsersPage from './Pages/UsersPage/UserPage';
 import './App.css';
+import Product from './Pages/Product/Product';
+import Home from './Pages/HomePage/Home';
+import Login from './Pages/Authentication/Login';
+import NavBar from './Components/Navbar/NavBar';
+import CartPage from './Pages/CartPage/CartPage';
+import Checkout from './Components/Payment Checkout/Checkout';
+import PaymentSuccess from './Components/Payment Checkout/PaymentSuccess';
+import PaymentFailure from './Components/Payment Checkout/PaymentFailure';
 
 const App = () => {
   return (
     <Router>
       <div className="app-container">
-        <nav className="navbar">
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/register">Register</Link>
-            </li>
-            <li>
-              <Link to="/users">Users</Link>
-            </li>
-          </ul>
-        </nav>
-        <div className="main-content">
-          <Routes>
-            <Route path="/register" element={<RegisterPage />} />
-            <Route path="/users" element={<UsersPage />} />
-            <Route path="/" element={
-              <div>
-                <h1>Welcome to the Todo App</h1>
-                <p>Please navigate to <strong>/register</strong> to add a user or <strong>/users</strong> to view users.</p>
-              </div>
-            } />
-          </Routes>
-        </div>
+        <NavBar />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<SignUpPage />} />
+          <Route path="/users" element={<UsersPage />} />
+          <Route path="/product" element={<Product />} />
+          <Route path="/cart" element={<CartPage />} />
+          <Route path="/payment/checkout" element={<Checkout />} />
+          <Route path="/payment/success" element={<PaymentSuccess />} />
+          <Route path="/payment/failure" element={<PaymentFailure />} />
+        </Routes>
       </div>
     </Router>
   );
