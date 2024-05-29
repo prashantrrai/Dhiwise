@@ -17,6 +17,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import OrdersPage from './Pages/OrdersPage/OrdersPage';
 import Dashboard from './Pages/Dashboard/Dashboard';
+import ResearchAndSupport from './Pages/ResearchAndSupport/ResearchAndSupport';
 
 const App = () => {
   return (
@@ -35,6 +36,7 @@ const App = () => {
           <Route path="/payment/failure" element={<PaymentFailure />} />
           <Route path="/orders" element={<OrdersPage />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/support" element={<ResearchAndSupport />} />
         </Routes>
       </div>
       <ToastContainer />

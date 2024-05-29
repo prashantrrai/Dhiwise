@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './ProductDetails.css';
 import { GetProducts } from '../../Services/Product/Product';
 import { useDispatch } from 'react-redux';
-import { addToCart, setCartItemsFromLocalStorage } from '../../Slice/cartSlice';
+import { addToCart, setCartItemsFromLocalStorage } from '../../Redux/Slice/cartSlice';
 import { loadCartItems } from '../../Utils/cartutils';
 import { toast } from 'react-toastify';
 

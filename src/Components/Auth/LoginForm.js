@@ -3,7 +3,7 @@ import './LoginForm.css';
 import { Link, useNavigate } from 'react-router-dom';
 import { Login } from '../../Services/Auth/Login';
 import { useDispatch } from 'react-redux';
-import { login } from '../../Slice/authSlice';
+import { login } from '../../Redux/Slice/authSlice';
 import { toast } from 'react-toastify';
 
 const LoginForm = () => {

@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import './NavBar.css';
-import { logout } from '../../Slice/authSlice';
+import { logout } from '../../Redux/Slice/authSlice';
 import { toast } from 'react-toastify';
 
 const NavBar = () => {
@@ -25,7 +25,7 @@ const NavBar = () => {
             <nav className="nav">
                 <Link to="/dashboard" className="nav-item">Dashboard</Link>
                 <Link to="/product" className="nav-item">Products</Link>
-                <Link to="/resources-support" className="nav-item">Resources & Support</Link>
+                <Link to="/support" className="nav-item">Resources & Support</Link>
                 <Link to="/orders" className="nav-item">Orders</Link>
             </nav>
 

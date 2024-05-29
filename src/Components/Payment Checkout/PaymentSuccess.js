@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import './PaymentModal.css';
 import { GenerateOrder } from '../../Services/Orders/orders';
 import { useDispatch } from 'react-redux';
-import { clearCart } from '../../Slice/cartSlice';
+import { clearCart } from '../../Redux/Slice/cartSlice';
 import { GetProductsById } from '../../Services/Product/Product';
 
 Modal.setAppElement('#root');

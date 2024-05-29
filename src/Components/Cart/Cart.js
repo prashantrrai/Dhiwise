@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { incrementQuantity, decrementQuantity, removeFromCart, clearCart, setCartItemsFromLocalStorage } from '../../Slice/cartSlice';
+import { incrementQuantity, decrementQuantity, removeFromCart, clearCart, setCartItemsFromLocalStorage } from '../../Redux/Slice/cartSlice';
 import './Cart.css';
 import { useNavigate } from 'react-router-dom';
 import { GetProductsById } from '../../Services/Product/Product';
