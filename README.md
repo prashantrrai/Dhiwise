@@ -35,11 +35,13 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 
 4. **Login Credentials:**
+
    ```sh
    Username : prashantrrai 
    Password : Admin@123
 
 5. **Payment Details of Card:**
+
    ```sh
    Card Number : 5555555555554444 
    Exp. Date   : Any Choice
